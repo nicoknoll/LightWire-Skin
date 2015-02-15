@@ -103,7 +103,7 @@ For licensing, see LICENSE.md or http://ckeditor.com/license
 
 .cke_top {
 		border-bottom: 1px solid #dedede;
-		padding: 6px 8px 2px;
+		padding: 6px 8px 0px;
 		white-space: normal;
 		background: #f5f5f5;
 		float: left;
@@ -443,16 +443,8 @@ a.cke_button {
 
 }
 
-.cke_hc .cke_button_on,.cke_hc a.cke_button_off:hover,.cke_hc a.cke_button_off:focus,.cke_hc a.cke_button_off:active,.cke_hc a.cke_button_disabled:hover,.cke_hc a.cke_button_disabled:focus,.cke_hc a.cke_button_disabled:active {
-		border-width: 3px;
-		padding: 1px 3px;
-}
 
 
-
-.cke_hc .cke_button_disabled {
-		opacity: .5;
-}
 
 a.cke_button_on:hover,a.cke_button_on:focus,a.cke_button_on:active {
 		background-color: #F8F8F8;
@@ -960,9 +952,10 @@ a.cke_button_disabled:hover, a.cke_button_disabled:active, a.cke_button_disabled
 		outline: 0;
 		border: 0;
 		color: #4c4c4c;
-		text-shadow: 0 1px 0 #fff;
 		font-weight: bold;
 		font-size: 11px;
+		border:1px solid transparent;
+		cursor:pointer;
 }
 
 .cke_rtl .cke_path,.cke_rtl .cke_path_item,.cke_rtl .cke_path_empty {
@@ -970,15 +963,19 @@ a.cke_button_disabled:hover, a.cke_button_disabled:active, a.cke_button_disabled
 }
 
 a.cke_path_item:hover,a.cke_path_item:focus,a.cke_path_item:active {
-		background-color: #bfbfbf;
+		background-color: #F8F8F8;
+			background-image: -webkit-linear-gradient(top,#f8f8f8,#f1f1f1);
+			background-image: -moz-linear-gradient(top,#f8f8f8,#f1f1f1);
+			background-image: -ms-linear-gradient(top,#f8f8f8,#f1f1f1);
+			background-image: -o-linear-gradient(top,#f8f8f8,#f1f1f1);
+			background-image: linear-gradient(top,#f8f8f8,#f1f1f1);
+			
+			-webkit-box-shadow: inset 0px 1px 2px rgba(0,0,0,.1);
+			-moz-box-shadow: inset 0px 1px 2px rgba(0,0,0,.1);
+			box-shadow: inset 0px 1px 2px rgba(0,0,0,.1);
+			color: black;
+		border: 1px solid #C6C6C6 !important;
 		color: #333;
-		text-shadow: 0 1px 0 rgba(255,255,255,.5);
-		-moz-border-radius: 2px;
-		-webkit-border-radius: 2px;
-		border-radius: 2px;
-		-moz-box-shadow: 0 0 4px rgba(0,0,0,.5) inset,0 1px 0 rgba(255,255,255,.5);
-		-webkit-box-shadow: 0 0 4px rgba(0,0,0,.5) inset,0 1px 0 rgba(255,255,255,.5);
-		box-shadow: 0 0 4px rgba(0,0,0,.5) inset,0 1px 0 rgba(255,255,255,.5);
 }
 
 .cke_hc a.cke_path_item:hover,.cke_hc a.cke_path_item:focus,.cke_hc a.cke_path_item:active {
@@ -1069,6 +1066,7 @@ legend.cke_voice_label {
 }
 
 .cke_button__button_icon:before {
+	content:"\f04d";
 }
 
 .cke_button__checkbox_icon:before {
@@ -1110,6 +1108,7 @@ legend.cke_voice_label {
 }
 
 .cke_button__hiddenfield_icon:before {
+		content:"\f096";
 }
 
 .cke_button__horizontalrule_icon:before {
@@ -1234,12 +1233,15 @@ content: "\f00c";
 
 
 .cke_button__select_icon:before {
+	content:"\f150";
 }
 
 .cke_button__selectall_icon:before {
+content:"\f150";
 }
 
 .cke_button__showblocks_icon:before {
+		content:"\f029";
 }
 
 .cke_button__smiley_icon:before {
@@ -1280,10 +1282,12 @@ content: "\f00c";
 
 
 .cke_button__templates_icon:before {
+content:"\f114";
 }
 
 
 .cke_button__textarea_icon:before {
+content:"\f044";
 }
 
 .cke_button__textcolor_icon:before {
@@ -1291,6 +1295,7 @@ content: "\f00c";
 }
 
 .cke_button__textfield_icon:before {
+content:"\f044";
 }
 
 .cke_button__underline_icon:before {
