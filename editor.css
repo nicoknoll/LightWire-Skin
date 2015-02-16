@@ -101,6 +101,8 @@
 		width: 100%;
 }
 
+
+
 .cke_top {
 		border-bottom: 1px solid #dedede;
 		padding: 6px 8px 0px;
@@ -404,7 +406,7 @@ a:hover.cke_colorauto,a:hover.cke_colormore,a:focus.cke_colorauto,a:focus.cke_co
 a.cke_button {
 		display: inline-block;
 		height: 18px;
-		padding: 6px 8px;
+		padding: 6px 8px 6px;
 		outline: 0;
 		cursor: default;
 		float: left;
@@ -521,7 +523,7 @@ a.cke_button_disabled:hover, a.cke_button_disabled:active, a.cke_button_disabled
 .cke_button_icon {
 		cursor: inherit;
 		background-repeat: no-repeat;
-		margin-top: 1px;
+		margin-bottom: 1px;
 		width: 16px;
 		height: 16px;
 		float: left;
@@ -1023,14 +1025,18 @@ legend.cke_voice_label {
 }
 
 .cke_button_icon:before {
-	font: normal normal normal 12px/1 FontAwesome;
+	font: normal normal normal 14px/1 FontAwesome;
 	color: #666;
 	font-weight: normal;
 	width:16px;
 	height:14px;
 	text-align: center;
 	float:left;
-	padding-top:2px;
+	padding:1px 0px;
+	-webkit-font-smoothing: antialiased; /* Fix for webkit rendering */
+	-webkit-text-size-adjust: 100%;
+	-moz-osx-font-smoothing: grayscale;
+	box-sizing:content-box;
 }
 
 .cke_button__about_icon:before {
