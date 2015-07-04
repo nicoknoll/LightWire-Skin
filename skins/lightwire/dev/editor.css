@@ -101,6 +101,8 @@
 		width: 100%;
 }
 
+
+
 .cke_top {
 		border-bottom: 1px solid #dedede;
 		padding: 6px 8px 0px;
@@ -190,7 +192,7 @@
 		height: 180px;
 		overflow: hidden;
 		background-color: #fff;
-
+		
 
 		border: 1px solid #bbb;
 		-webkit-border-radius: 0;
@@ -404,7 +406,7 @@ a:hover.cke_colorauto,a:hover.cke_colormore,a:focus.cke_colorauto,a:focus.cke_co
 a.cke_button {
 		display: inline-block;
 		height: 18px;
-		padding: 6px 8px;
+		padding: 6px 8px 6px;
 		outline: 0;
 		cursor: default;
 		float: left;
@@ -433,7 +435,7 @@ a.cke_button {
 			background-image: -ms-linear-gradient(top,#f8f8f8,#f1f1f1);
 			background-image: -o-linear-gradient(top,#f8f8f8,#f1f1f1);
 			background-image: linear-gradient(top,#f8f8f8,#f1f1f1);
-
+			
 			-webkit-box-shadow: inset 0px 1px 2px rgba(0,0,0,.1);
 			-moz-box-shadow: inset 0px 1px 2px rgba(0,0,0,.1);
 			box-shadow: inset 0px 1px 2px rgba(0,0,0,.1);
@@ -453,7 +455,7 @@ a.cke_button_on:hover,a.cke_button_on:focus,a.cke_button_on:active {
 		background-image: -ms-linear-gradient(top,#f8f8f8,#f1f1f1);
 		background-image: -o-linear-gradient(top,#f8f8f8,#f1f1f1);
 		background-image: linear-gradient(top,#f8f8f8,#f1f1f1);
-
+		
 		-webkit-box-shadow: inset 0px 1px 2px rgba(0,0,0,.1);
 		-moz-box-shadow: inset 0px 1px 2px rgba(0,0,0,.1);
 		box-shadow: inset 0px 1px 2px rgba(0,0,0,.1);
@@ -470,10 +472,10 @@ a.cke_button_off:hover,a.cke_button_off:focus,a.cke_button_disabled:hover,a.cke_
 	background-image: -ms-linear-gradient(top,#f8f8f8,#f1f1f1);
 	background-image: -o-linear-gradient(top,#f8f8f8,#f1f1f1);
 	background-image: linear-gradient(top,#f8f8f8,#f1f1f1);
-
+	
 	border: 1px solid #C6C6C6;
 	color: #333;
-
+	
 	-webkit-box-shadow: 0px 1px 1px rgba(0,0,0,.1);
 	-moz-box-shadow: 0px 1px 1px rgba(0,0,0,.1);
 	box-shadow: 0px 1px 1px rgba(0,0,0,.1);
@@ -486,7 +488,7 @@ a.cke_button_off:active {
 		background-image: -ms-linear-gradient(top,#f8f8f8,#f1f1f1);
 		background-image: -o-linear-gradient(top,#f8f8f8,#f1f1f1);
 		background-image: linear-gradient(top,#f8f8f8,#f1f1f1);
-
+		
 		-webkit-box-shadow: inset 0px 1px 2px rgba(0,0,0,.1);
 		-moz-box-shadow: inset 0px 1px 2px rgba(0,0,0,.1);
 		box-shadow: inset 0px 1px 2px rgba(0,0,0,.1);
@@ -521,7 +523,7 @@ a.cke_button_disabled:hover, a.cke_button_disabled:active, a.cke_button_disabled
 .cke_button_icon {
 		cursor: inherit;
 		background-repeat: no-repeat;
-		margin-top: 1px;
+		margin-bottom: 1px;
 		width: 16px;
 		height: 16px;
 		float: left;
@@ -829,14 +831,14 @@ a.cke_button_disabled:hover, a.cke_button_disabled:active, a.cke_button_disabled
 		background-image: -ms-linear-gradient(top,#f8f8f8,#f1f1f1);
 		background-image: -o-linear-gradient(top,#f8f8f8,#f1f1f1);
 		background-image: linear-gradient(top,#f8f8f8,#f1f1f1);
-
+		
 		border: 1px solid #C6C6C6;
 		color: #333;
-
+		
 		-webkit-box-shadow: 0px 1px 1px rgba(0,0,0,.1);
 		-moz-box-shadow: 0px 1px 1px rgba(0,0,0,.1);
 		box-shadow: 0px 1px 1px rgba(0,0,0,.1);
-
+		
 }
 
 .cke_combo_off a.cke_combo_button:active,.cke_combo_on a.cke_combo_button {
@@ -846,7 +848,7 @@ a.cke_button_disabled:hover, a.cke_button_disabled:active, a.cke_button_disabled
 		background-image: -ms-linear-gradient(top,#f8f8f8,#f1f1f1);
 		background-image: -o-linear-gradient(top,#f8f8f8,#f1f1f1);
 		background-image: linear-gradient(top,#f8f8f8,#f1f1f1);
-
+		
 		-webkit-box-shadow: inset 0px 1px 2px rgba(0,0,0,.1);
 		-moz-box-shadow: inset 0px 1px 2px rgba(0,0,0,.1);
 		box-shadow: inset 0px 1px 2px rgba(0,0,0,.1);
@@ -969,7 +971,7 @@ a.cke_path_item:hover,a.cke_path_item:focus,a.cke_path_item:active {
 			background-image: -ms-linear-gradient(top,#f8f8f8,#f1f1f1);
 			background-image: -o-linear-gradient(top,#f8f8f8,#f1f1f1);
 			background-image: linear-gradient(top,#f8f8f8,#f1f1f1);
-
+			
 			-webkit-box-shadow: inset 0px 1px 2px rgba(0,0,0,.1);
 			-moz-box-shadow: inset 0px 1px 2px rgba(0,0,0,.1);
 			box-shadow: inset 0px 1px 2px rgba(0,0,0,.1);
@@ -1023,14 +1025,18 @@ legend.cke_voice_label {
 }
 
 .cke_button_icon:before {
-	font: normal normal normal 12px/1 FontAwesome;
+	font: normal normal normal 14px/1 FontAwesome;
 	color: #666;
 	font-weight: normal;
 	width:16px;
 	height:14px;
 	text-align: center;
 	float:left;
-	padding-top:2px;
+	padding:1px 0px;
+	-webkit-font-smoothing: antialiased; /* Fix for webkit rendering */
+	-webkit-text-size-adjust: 100%;
+	-moz-osx-font-smoothing: grayscale;
+	box-sizing:content-box;
 }
 
 .cke_button__about_icon:before {
@@ -1308,4 +1314,17 @@ content:"\f044";
 
 .cke_button__unlink_icon:before {
 		content: "\f127";
+}
+
+/* inline fix */
+
+.InputfieldCKEditor {
+	position: relative;
+}
+
+.cke_float {
+	bottom: 100% !important;
+	top: auto !important;
+	left: 0 !important;
+	right: auto !important;
 }

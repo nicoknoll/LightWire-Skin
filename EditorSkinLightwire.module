@@ -1,0 +1,44 @@
+<?php
+/**
+ * MarkupSEO
+ * The all-in-one SEO solution for ProcessWire.
+ *
+ * By Nico Knoll (http://nico.is/)
+ *
+ */
+
+class EditorSkinLightwire extends WireData implements Module, ConfigurableModule {
+
+	public static function getModuleInfo() {
+		return array(
+			'title' => __('Lightwire Skin for CKEditor'),
+			'version' => '1',
+			'summary' => __('A lighter skin for CKEditor.'),
+			'requires' => array('InputfieldCKEditor')
+		);
+	}
+
+	/**
+	 * Create the modules setting page
+	 *
+	 */
+	static public function getModuleConfigInputfields(array $data) {
+		// since this is a static function, we can't use $this->modules, so get them from the global wire() function
+		$modules = wire('modules');
+		$config = wire('config');
+
+		// this is a container for fields, basically like a fieldset
+		$form = new InputfieldWrapper();
+
+		$field = $modules->get("InputfieldMarkup");
+		$field->label = __("How to use");
+		$string[] = __('1. Go to the field you want to use this skin for (of course that field has to use CKEditor as "Inputfield Type").');
+		$string[] = __('2. Click on the "Input" tab.');
+		$string[] = __('3. Scroll down to "Custom Config Options" and add the following line:');
+		$field->value = implode('<br>', $string).'<pre style="padding:20px;border:1px solid #eee;background:#f9f9f9;margin-top:20px;">skin: "lightwire,'.$config->urls->EditorSkinLightwire.'skins/lightwire/"</pre>'; 
+		$form->add($field);
+
+		return $form;
+	}
+
+}
