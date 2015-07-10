@@ -12,7 +12,7 @@ class EditorSkinLightwire extends WireData implements Module, ConfigurableModule
 	public static function getModuleInfo() {
 		return array(
 			'title' => __('Lightwire Skin for CKEditor'),
-			'version' => '1.0.1*',
+			'version' => '1.0.2',
 			'summary' => __('A lighter skin for CKEditor.'),
 			'requires' => array('InputfieldCKEditor')
 		);
@@ -31,12 +31,25 @@ class EditorSkinLightwire extends WireData implements Module, ConfigurableModule
 		$form = new InputfieldWrapper();
 
 		$field = $modules->get("InputfieldMarkup");
-		$field->label = __("How to use");
+		$field->label = __("How to use by field");
 		$string[] = __('1. Go to the field you want to use this skin for (of course that field has to use CKEditor as "Inputfield Type").');
 		$string[] = __('2. Click on the "Input" tab.');
 		$string[] = __('3. Scroll down to "Custom Config Options" and add the following line:');
 		$field->value = implode('<br>', $string).'<pre style="padding:20px;border:1px solid #eee;background:#f9f9f9;margin-top:20px;">skin: "lightwire,'.$config->urls->EditorSkinLightwire.'skins/lightwire/"</pre>'; 
+		$field->notes = __('It\'s not possible to have more than one style for multiple fields on one page with CKEditor 4.');
 		$form->add($field);
+
+		$field = $modules->get("InputfieldMarkup");
+		$field->label = __("How to use globally");
+		$string = __('Go to /site/modules/InputfieldCKEditor/config.js and add the following config:');
+		$field->value = $string.'<pre style="padding:20px;border:1px solid #eee;background:#f9f9f9;margin-top:20px;">CKEDITOR.editorConfig = function( config ) {
+    config.skin = lightwire,'.$config->urls->EditorSkinLightwire.'skins/lightwire/";
+};</pre>'; 
+		$field->notes = __('Make sure to adjust all the other config-*.js files there as well.');
+		$form->add($field);
+
+
+
 
 		return $form;
 	}
