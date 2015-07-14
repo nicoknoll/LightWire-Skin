@@ -43,7 +43,7 @@ class EditorSkinLightwire extends WireData implements Module, ConfigurableModule
 		$field->label = __("How to use globally");
 		$string = __('Go to /site/modules/InputfieldCKEditor/config.js and add the following config:');
 		$field->value = $string.'<pre style="padding:20px;border:1px solid #eee;background:#f9f9f9;margin-top:20px;">CKEDITOR.editorConfig = function( config ) {
-    config.skin = lightwire,'.$config->urls->EditorSkinLightwire.'skins/lightwire/";
+    config.skin = "lightwire,'.$config->urls->EditorSkinLightwire.'skins/lightwire/";
 };</pre>'; 
 		$field->notes = __('Make sure to adjust all the other config-*.js files there as well.');
 		$form->add($field);
